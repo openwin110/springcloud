@@ -1,0 +1,28 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=
+             UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 941126
+
+mybatis:
+  type-aliases-package: com.itheima.springcloud.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka10086.com:10086/eureka/,http://eureka10087.com:10087/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 5
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: payment8003

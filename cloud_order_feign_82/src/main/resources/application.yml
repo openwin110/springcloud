@@ -1,0 +1,21 @@
+server:
+  port: 82
+spring:
+  application:
+    name: cloud-order-feign
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka10086.com:10086/eureka/,http://eureka10087.com:10087/eureka/
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 5
+ribbon:
+  #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
+  ReadTimeout: 5000
+  #指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
+logging:
+  level:
+    com.itheima.springcloud.feign.PaymentFeignService: debug

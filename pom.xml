@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ithiema</groupId>
+  <artifactId>cloud2020</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>cloud_provider_payment_8001</module>
+    <module>eureka_service_10086</module>
+    <module>cloud_consumer_80</module>
+      <module>eureka_service_10087</module>
+<!--    <module>cloud_provider_payment_8002</module>-->
+      <module>cloud_provider_payment_8003</module>
+      <module>cloud_provider_payment_8004</module>
+      <module>cloud_consumer_81</module>
+      <module>cloud_order_feign_82</module>
+    <module>cloud-api-commons</module>
+      <module>cloud-hystrix-payment-8005</module>
+      <module>cloud-hystrix-consumer-80</module>
+      <module>cloud-hystrixdashboard-9001</module>
+      <module>cloud-gateway-9527</module>
+      <module>cloud-config-3344</module>
+      <module>cloud-config-client-3355</module>
+      <module>cloud-config-client-3366</module>
+      <module>cloud-rabbitmq-provider-8801</module>
+    <module>cloud-rabbitmq-consumer-8802</module>
+    <module>cloud-rabbitmq-consumer-8803</module>
+      <module>cloud-albaba-pay-9001</module>
+    <module>cloud-albaba-pay-9002</module>
+    <module>cloud-albaba-pay-9003</module>
+    <module>cloud-albaba-order-83</module>
+      <module>cloud-albaba-config-client-3377</module>
+      <module>cloud-albaba-sentinel-8401</module>
+      <module>seata-storage-service2002</module>
+      <module>seata-order-service2001</module>
+      <module>seata-account-service2003</module>
+    <module>snowflake-demo</module>
+  </modules>
+  <packaging>pom</packaging>
+
+  <!--统一管理jar包版本-->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>4.12</junit.version>
+    <lombok.version>1.18.10</lombok.version>
+    <log4j.version>1.2.17</log4j.version>
+    <mysql.version>8.0.18</mysql.version>
+    <druid.version>1.1.16</druid.version>
+    <mapper.spring.boot.version>2.1.5</mapper.spring.boot.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.0.0</version>
+      </dependency>
+      <!--spring boot 2.2.2-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--spring cloud Hoxton.SR1-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Hoxton.SR1</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!--spring cloud 阿里巴巴-->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>2.1.0.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--mysql-->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <!-- druid-->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
+      <!--mybatis-->
+      <dependency>
+        <groupId>tk.mybatis</groupId>
+        <artifactId>mapper-spring-boot-starter</artifactId>
+        <version>${mapper.spring.boot.version}</version>
+      </dependency>
+      <!--junit-->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <!--log4j-->
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <!--添加插件-->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <fork>true</fork>
+          <addResources>true</addResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
