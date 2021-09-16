@@ -22,9 +22,9 @@
       <module>cloud-hystrix-consumer-80</module>
       <module>cloud-hystrixdashboard-9001</module>
       <module>cloud-gateway-9527</module>
-      <module>cloud-config-3344</module>
-      <module>cloud-config-client-3355</module>
-      <module>cloud-config-client-3366</module>
+      <module>cloud-com.bean.config-3344</module>
+      <module>cloud-com.bean.config-client-3355</module>
+      <module>cloud-com.bean.config-client-3366</module>
       <module>cloud-rabbitmq-provider-8801</module>
     <module>cloud-rabbitmq-consumer-8802</module>
     <module>cloud-rabbitmq-consumer-8803</module>
@@ -32,12 +32,13 @@
     <module>cloud-albaba-pay-9002</module>
     <module>cloud-albaba-pay-9003</module>
     <module>cloud-albaba-order-83</module>
-      <module>cloud-albaba-config-client-3377</module>
+      <module>cloud-albaba-com.bean.config-client-3377</module>
       <module>cloud-albaba-sentinel-8401</module>
       <module>seata-storage-service2002</module>
       <module>seata-order-service2001</module>
       <module>seata-account-service2003</module>
     <module>snowflake-demo</module>
+    <module>spring-bean-service</module>
   </modules>
   <packaging>pom</packaging>
 

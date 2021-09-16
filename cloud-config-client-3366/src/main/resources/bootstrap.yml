@@ -2,11 +2,11 @@ server:
   port: 3366
 spring:
   application:
-    name: cloud-config-client
+    name: cloud-com.bean.config-client
   cloud:
     config:
       label: master
-      name: config
+      name: com.bean.config
       profile: dev
       uri: http://localhost:3344
   #配置rabbitmq

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/nacos")
 @RefreshScope
 public class NacosConfigController {
-    @Value("${config.info}")
+    @Value("${com.bean.config.info}")
     private String configInfo;
 
     @GetMapping("/config/info")

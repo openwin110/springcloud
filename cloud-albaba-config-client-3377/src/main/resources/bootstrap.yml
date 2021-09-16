@@ -2,7 +2,7 @@ server:
   port: 3377
 spring:
   application:
-    name: nacos-config-client
+    name: nacos-com.bean.config-client
   cloud:
     nacos:
       discovery:

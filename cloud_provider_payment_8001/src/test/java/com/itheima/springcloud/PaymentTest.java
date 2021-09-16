@@ -22,7 +22,7 @@ public class PaymentTest {
     @Test
     public void fun2(){
         Payment payment = new Payment();
-        payment.setId(3l);
+        payment.setId(4l);
         payment.setSerial("jd202000202020");
         int result = paymentServiceImpl.create(payment);
         if(result>0){

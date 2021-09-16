@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-albaba-config-client-3377</artifactId>
+    <artifactId>cloud-albaba-com.bean.config-client-3377</artifactId>
     <dependencies>
-        <!-- nacos config-->
+        <!-- nacos com.bean.config-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-com.bean.config</artifactId>
         </dependency>
         <!-- SpringCloud ailibaba nacos-->
         <dependency>

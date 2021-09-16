@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-config-3344</artifactId>
+    <artifactId>cloud-com.bean.config-3344</artifactId>
     <dependencies>
-    <!--config server-->
+    <!--com.bean.config server-->
     <dependency>
         <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-config-server</artifactId>
+        <artifactId>spring-cloud-com.bean.config-server</artifactId>
     </dependency>
     <!-- 添加消息总线RabbitMQ支持 -->
     <dependency>

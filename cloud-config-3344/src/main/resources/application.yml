@@ -2,14 +2,14 @@ server:
   port: 3344
 spring:
   application:
-    name: could-config-center
+    name: could-com.bean.config-center
   cloud:
     config:
       server:
         git:
-          uri: https://gitee.com/yangpengpeng1/springcloud-config.git
+          uri: https://gitee.com/yangpengpeng1/springcloud-com.bean.config.git
           #搜索目录
-          search-paths: springcloud-config
+          search-paths: springcloud-com.bean.config
       #读取分支
       label: master
     #配置rabbitmq
