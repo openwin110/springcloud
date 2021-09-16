@@ -31,7 +31,7 @@ public class PaymentTest {
         int result = paymentServiceA.create(payment1, payment2);
 
         if(result>0){
-            System.out.println("恭喜你，订单添加成功!");
+            System.out.println("------恭喜你，订单添加成功------");
         }else{
             System.out.println("很遗憾，订单添加失败，请重新尝试！");
         }
