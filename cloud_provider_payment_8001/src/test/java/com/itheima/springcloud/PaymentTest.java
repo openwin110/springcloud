@@ -1,6 +1,7 @@
 package com.itheima.springcloud;
 
 import com.itheima.springcloud.pojo.Payment;
+import com.itheima.springcloud.service.impl.PaymentServiceA;
 import com.itheima.springcloud.service.impl.PaymentServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class PaymentTest {
     @Autowired
+    private PaymentServiceA paymentServiceA;
+
+    @Autowired
     private PaymentServiceImpl paymentServiceImpl;
     @Test
     public void fun1(){
@@ -21,10 +25,11 @@ public class PaymentTest {
     //测试插入数据
     @Test
     public void fun2(){
-        Payment payment = new Payment();
-        payment.setId(4l);
-        payment.setSerial("jd202000202020");
-        int result = paymentServiceImpl.create(payment);
+        Payment payment1 = new Payment(4l, "jd20202023");
+        Payment payment2 = new Payment(5l, "jd20202022");
+
+        int result = paymentServiceA.create(payment1, payment2);
+
         if(result>0){
             System.out.println("恭喜你，订单添加成功!");
         }else{

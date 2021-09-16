@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
@@ -16,8 +18,8 @@ public class PaymentServiceImpl implements PaymentService {
     private PaymentMapper paymentMapper;
     @Autowired
     private Utils utils;
-    //创建支付订单
-    public int create(Payment payment){
+    //创建支付订单 编程式事务管理
+    /*public int create(Payment payment){
         TransactionStatus ts = null;
         int is_ok = -1;
         try{
@@ -40,6 +42,13 @@ public class PaymentServiceImpl implements PaymentService {
 
             }
         }
+        return is_ok;
+    }*/
+    //创建订单  声明式事务管理
+    @Transactional(rollbackFor = {Exception.class}, propagation = Propagation.REQUIRED)
+    public int create(Payment payment){
+        int is_ok = paymentMapper.insert(payment);
+        int idx = 1 / 0;
         return is_ok;
     }
     //查询支付订单
